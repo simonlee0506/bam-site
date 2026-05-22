@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAM 文献助手 — 生物医学文献检索与 AI 综述工具</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+           background: #f7f8fa; color: #222; }
+    header { background: #1a3a5c; color: #fff; padding: 48px 24px 36px;
+             text-align: center; }
+    header h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: .02em; }
+    header p  { margin-top: 12px; font-size: 1.1rem; opacity: .85; max-width: 560px;
+                margin-left: auto; margin-right: auto; }
+    .badge { display: inline-block; background: #e8f4ff; color: #1a3a5c;
+             border-radius: 20px; padding: 4px 14px; font-size: .85rem;
+             margin: 4px; font-weight: 500; }
+    section { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+    h2 { font-size: 1.5rem; color: #1a3a5c; margin-bottom: 18px; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                    gap: 20px; }
+    .card { background: #fff; border-radius: 12px; padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.07); }
+    .card h3 { font-size: 1.05rem; color: #1a3a5c; margin-bottom: 8px; }
+    .card p  { font-size: .92rem; color: #555; line-height: 1.6; }
+    .price-row { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 12px; }
+    .price-card { background: #fff; border-radius: 12px; padding: 24px 28px;
+                  box-shadow: 0 2px 8px rgba(0,0,0,.07); flex: 1; min-width: 220px; }
+    .price-card .amount { font-size: 2rem; font-weight: 700; color: #1a3a5c; }
+    .price-card .label  { font-size: .85rem; color: #888; margin-top: 4px; }
+    .btn { display: inline-block; padding: 13px 28px; border-radius: 8px;
+           font-size: 1rem; font-weight: 600; text-decoration: none;
+           cursor: pointer; transition: opacity .15s; }
+    .btn:hover { opacity: .85; }
+    .btn-primary { background: #1a3a5c; color: #fff; }
+    .btn-outline { background: #fff; color: #1a3a5c;
+                   border: 2px solid #1a3a5c; }
+    .btn-wechat  { background: #07c160; color: #fff; }
+    .dl-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    .sep { border: none; border-top: 1px solid #e8e8e8; margin: 0; }
+    .trial-note { background: #eaf4ff; border-radius: 10px; padding: 18px 22px;
+                  margin-top: 20px; font-size: .95rem; color: #1a3a5c; line-height: 1.7; }
+    footer { text-align: center; padding: 32px 16px; color: #aaa; font-size: .85rem; }
+    a { color: #1a3a5c; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>BAM 文献助手</h1>
+  <p>面向生物医学、农业与医学研究者的多源文献检索 + AI 综述工具</p>
+  <div style="margin-top:18px">
+    <span class="badge">PubMed</span>
+    <span class="badge">Europe PMC</span>
+    <span class="badge">bioRxiv / medRxiv</span>
+    <span class="badge">OpenAlex</span>
+    <span class="badge">AI 综述生成</span>
+    <span class="badge">全文翻译</span>
+  </div>
+</header>
+
+<!-- 下载 -->
+<section>
+  <h2>下载</h2>
+  <p style="color:#555; margin-bottom:4px">支持 macOS（Apple Silicon &amp; Intel）和 Windows 10/11</p>
+  <p style="color:#888; font-size:.9rem">免费试用 14 天，无需注册，启动即用。</p>
+  <div class="dl-row">
+    <a class="btn btn-primary" href="https://github.com/simonlee0506/BAM/releases/latest/download/BAM文献助手.dmg">
+      ⬇ 下载 macOS (.dmg)
+    </a>
+    <a class="btn btn-outline" href="https://github.com/simonlee0506/BAM/releases/latest/download/BAM文献助手_Setup.exe">
+      ⬇ 下载 Windows (.exe)
+    </a>
+  </div>
+  <div class="trial-note">
+    ✅ 试用期 14 天内：检索、导出、PDF 下载<strong>永久免费</strong>；AI 综述 &amp; 全文翻译各享 <strong>3 次</strong>免费体验，摘要翻译每日 10 次。<br>
+    试用到期后，购买激活码即可解锁无限使用。
+  </div>
+</section>
+
+<hr class="sep" />
+
+<!-- 功能 -->
+<section>
+  <h2>核心功能</h2>
+  <div class="feature-grid">
+    <div class="card">
+      <h3>🔍 多源一键检索</h3>
+      <p>同时检索 PubMed、Europe PMC、bioRxiv/medRxiv、OpenAlex，支持关键词 + 作者 + 机构 + 时间范围组合过滤。</p>
+    </div>
+    <div class="card">
+      <h3>📄 全文获取</h3>
+      <p>自动检测 PubMed Central、Unpaywall、OA 链接，一键检查并提取全文，批量下载 PDF。</p>
+    </div>
+    <div class="card">
+      <h3>🤖 AI 综述生成</h3>
+      <p>基于选中文献的摘要 + 全文，调用 Claude / 智谱 GLM 生成结构化中文综述，支持导出 Word。</p>
+    </div>
+    <div class="card">
+      <h3>🌐 全文翻译</h3>
+      <p>对单篇全文进行智能翻译，长文自动分段处理后合并，保留学术专业术语。</p>
+    </div>
+    <div class="card">
+      <h3>📝 摘要翻译</h3>
+      <p>检索结果一键翻译为中文摘要，方便快速筛选文献，结果可导出 Word/Excel。</p>
+    </div>
+    <div class="card">
+      <h3>📊 导出与管理</h3>
+      <p>检索结果导出为 Word/Excel，支持文献分类标注，批量 PDF 下载到本地文件夹。</p>
+    </div>
+  </div>
+</section>
+
+<hr class="sep" />
+
+<!-- 购买 -->
+<section id="buy">
+  <h2>购买激活码</h2>
+  <p style="color:#555; margin-bottom:20px">一次购买，永久解锁 AI 综述 &amp; 全文翻译（自备 API Key 版）。</p>
+  <div class="price-row">
+    <div class="price-card">
+      <div class="amount">¥76</div>
+      <div class="label">人民币买断 · 微信/支付宝</div>
+      <div style="margin-top:16px">
+        <a class="btn btn-wechat" href="https://afdian.com/a/BAM_literature" target="_blank">
+          爱发电购买
+        </a>
+      </div>
+      <p style="font-size:.82rem; color:#888; margin-top:10px">也支持月订阅 ¥20/月 · ¥50/3月 · ¥80/半年 · ¥128/年</p>
+    </div>
+    <div class="price-card">
+      <div class="amount">$12.99 <span style="font-size:1rem; font-weight:400">CAD</span></div>
+      <div class="label">国际购买 · 信用卡 / PayPal</div>
+      <div style="margin-top:16px">
+        <a class="btn btn-primary" href="https://simonlee05.lemonsqueezy.com/buy/bam-literature" target="_blank">
+          Lemon Squeezy 购买
+        </a>
+      </div>
+      <p style="font-size:.82rem; color:#888; margin-top:10px">购买后邮件自动发送激活码，在 App 设置中输入即可解锁。</p>
+    </div>
+  </div>
+</section>
+
+<hr class="sep" />
+
+<!-- 激活说明 -->
+<section>
+  <h2>如何激活</h2>
+  <ol style="line-height:2; color:#555; padding-left:20px; font-size:.95rem">
+    <li>购买后在付款确认邮件中找到激活码（格式如 <code>XXXX-XXXX-XXXX-XXXX</code>）。</li>
+    <li>打开 BAM 文献助手 → 上方「API 设置」→ 在「激活码」栏输入 → 点击「激活」。</li>
+    <li>激活后该功能永久解锁（仅限 1 台设备）。换电脑时请先在旧设备注销，再在新设备激活。</li>
+  </ol>
+</section>
+
+<hr class="sep" />
+
+<!-- 联系 -->
+<section>
+  <h2>联系 &amp; 支持</h2>
+  <p style="color:#555; line-height:1.8">
+    问题反馈、功能建议：<a href="mailto:simonlee0506@gmail.com">simonlee0506@gmail.com</a><br>
+    GitHub Issues：<a href="https://github.com/simonlee0506/BAM/issues" target="_blank">github.com/simonlee0506/BAM/issues</a>
+  </p>
+</section>
+
+<footer>
+  &copy; 2026 BAM 文献助手 · 个人开发者作品 · 保留所有权利
+</footer>
+
+</body>
+</html>
